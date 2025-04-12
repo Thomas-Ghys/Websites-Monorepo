@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/thomasghys.eu/src",
-  "tags": [],
+  "tags": ["type:app", "domain:thomasghys.eu"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",

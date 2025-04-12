@@ -18,8 +18,58 @@ export default [
 					allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
 					depConstraints: [
 						{
-							sourceTag: '*',
-							onlyDependOnLibsWithTags: ['*']
+							sourceTag: 'type:app',
+							onlyDependOnLibsWithTags: [
+								'type:app',
+								'type:smart-component',
+								'type:data-access',
+								'type:ui-component',
+								'type:model'
+							]
+						},
+						{
+							sourceTag: 'type:smart-component',
+							onlyDependOnLibsWithTags: [
+								'type:smart-component',
+								'type:data-access',
+								'type:ui-component',
+								'type:model'
+							]
+						},
+						{
+							sourceTag: 'type:data-access',
+							onlyDependOnLibsWithTags: [
+								'type:data-access',
+								'type:ui-component',
+								'type:model'
+							]
+						},
+						{
+							sourceTag: 'type:ui-component',
+							onlyDependOnLibsWithTags: [
+								'type:ui-component',
+								'type:model'
+							]
+						},
+						{
+							sourceTag: 'type:model',
+							onlyDependOnLibsWithTags: [
+								'type:model'
+							]
+						},
+						{
+							sourceTag: 'domain:thomasghys.eu',
+							onlyDependOnLibsWithTags: [
+								'domain:thomasghys.eu',
+								'domain:common'
+							]
+						},
+						{
+							sourceTag: 'domain:wild-safari-consultants.fun',
+							onlyDependOnLibsWithTags: [
+								'domain:wild-safari-consultants.fun',
+								'domain:common'
+							]
 						}
 					]
 				}
@@ -83,7 +133,10 @@ export default [
 			'space-unary-ops': 'error',
 			'switch-colon-spacing': 'error',
 			'template-curly-spacing': 'error',
-			'wrap-regex': 'error'
+			'wrap-regex': 'error',
+      '@typescript-eslint/no-inferrable-types': 'error',
+      '@typescript-eslint/no-unused-vars': 'error',
+      'new-cap': 'error'
 		}
 	},
 	{
