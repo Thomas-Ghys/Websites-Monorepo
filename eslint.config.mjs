@@ -70,6 +70,12 @@ export default [
 								'domain:wild-safari-consultants.fun',
 								'domain:common'
 							]
+						},
+						{
+							sourceTag: 'domain:common',
+							onlyDependOnLibsWithTags: [
+								'domain:common'
+							]
 						}
 					]
 				}
@@ -134,9 +140,9 @@ export default [
 			'switch-colon-spacing': 'error',
 			'template-curly-spacing': 'error',
 			'wrap-regex': 'error',
-      '@typescript-eslint/no-inferrable-types': 'error',
-      '@typescript-eslint/no-unused-vars': 'error',
-      'new-cap': 'error'
+			'@typescript-eslint/no-inferrable-types': 'error',
+			'@typescript-eslint/no-unused-vars': 'error',
+			'new-cap': 'error'
 		}
 	},
 	{
