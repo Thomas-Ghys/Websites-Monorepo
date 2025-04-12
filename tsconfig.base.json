@@ -15,7 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tg/common-model": ["libs/common/common-model/src/index.ts"]
+      "@tg/common-data-access": ["libs/common/common-data-access/src/index.ts"],
+      "@tg/common-model": ["libs/common/common-model/src/index.ts"],
+      "@tg/common-smart-component": [
+        "libs/common/common-smart-component/src/index.ts"
+      ],
+      "@tg/common-ui-component": [
+        "libs/common/common-ui-component/src/index.ts"
+      ],
+      "@tg/common-util": ["libs/common/common-util/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

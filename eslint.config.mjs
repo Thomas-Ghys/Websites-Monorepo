@@ -24,6 +24,7 @@ export default [
 								'type:smart-component',
 								'type:data-access',
 								'type:ui-component',
+								'type:util',
 								'type:model'
 							]
 						},
@@ -33,6 +34,7 @@ export default [
 								'type:smart-component',
 								'type:data-access',
 								'type:ui-component',
+								'type:util',
 								'type:model'
 							]
 						},
@@ -41,6 +43,7 @@ export default [
 							onlyDependOnLibsWithTags: [
 								'type:data-access',
 								'type:ui-component',
+								'type:util',
 								'type:model'
 							]
 						},
@@ -48,6 +51,14 @@ export default [
 							sourceTag: 'type:ui-component',
 							onlyDependOnLibsWithTags: [
 								'type:ui-component',
+								'type:util',
+								'type:model'
+							]
+						},
+						{
+							sourceTag: 'type:util',
+							onlyDependOnLibsWithTags: [
+								'type:util',
 								'type:model'
 							]
 						},
