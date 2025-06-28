@@ -37,7 +37,15 @@
                 "libs/common/common-ui-component/src/index.ts"
             ],
             "@tg/common-util": ["libs/common/common-util/src/index.ts"],
-            "@theme/data-access": ["libs/theme/theme-data-access/src/index.ts"]
+            "@theme/data-access": ["libs/theme/theme-data-access/src/index.ts"],
+            "@theme/model": ["libs/theme/theme-model/src/index.ts"],
+            "@theme/smart-component": [
+                "libs/theme/theme-smart-component/src/index.ts"
+            ],
+            "@theme/ui-component": [
+                "libs/theme/theme-ui-component/src/index.ts"
+            ],
+            "@theme/util": ["libs/theme/theme-util/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]
