@@ -2,7 +2,9 @@
   "name": "@thomas-ghys/source",
   "version": "0.0.0",
   "license": "CC BY-NC-SA 4.0",
-  "scripts": {},
+  "scripts": {
+      "generate-branding": "tsx scripts/generate-branding.ts"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~19.2.0",
@@ -64,6 +66,7 @@
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
+    "tsx": "^4.20.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.19.0"
   }
