@@ -1,30 +1,44 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@tg/common-data-access": ["libs/common/common-data-access/src/index.ts"],
-      "@tg/common-model": ["libs/common/common-model/src/index.ts"],
-      "@tg/common-smart-component": [
-        "libs/common/common-smart-component/src/index.ts"
-      ],
-      "@tg/common-ui-component": [
-        "libs/common/common-ui-component/src/index.ts"
-      ],
-      "@tg/common-util": ["libs/common/common-util/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@common/data-access": [
+                "libs/common/common-data-access/src/index.ts"
+            ],
+            "@common/model": ["libs/common/common-model/src/index.ts"],
+            "@common/smart-component": [
+                "libs/common/common-smart-component/src/index.ts"
+            ],
+            "@common/ui-component": [
+                "libs/common/common-ui-component/src/index.ts"
+            ],
+            "@common/util": ["libs/common/common-util/src/index.ts"],
+            "@tg/common-data-access": [
+                "libs/common/common-data-access/src/index.ts"
+            ],
+            "@tg/common-model": ["libs/common/common-model/src/index.ts"],
+            "@tg/common-smart-component": [
+                "libs/common/common-smart-component/src/index.ts"
+            ],
+            "@tg/common-ui-component": [
+                "libs/common/common-ui-component/src/index.ts"
+            ],
+            "@tg/common-util": ["libs/common/common-util/src/index.ts"],
+            "@theme/data-access": ["libs/theme/theme-data-access/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
 }
