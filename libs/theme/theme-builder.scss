@@ -1,0 +1,46 @@
+@use 'sass:map';
+
+@mixin theme-builder($brand) {
+    $coreColours: map.get($brand, coreColours);
+    $schemes: map.get($brand, schemes);
+    $palettes: map.get($brand, palettes);
+
+    @include generateCoreColourTokens($coreColours);
+    @include generateSchemeTokens($schemes);
+}
+
+@mixin generateCoreColourTokens($coreColours) {
+    :root {
+        @each $coreColourKey, $coreColourValue in $coreColours {
+            --theme-core-colour-#{$coreColourKey}: #{$coreColourValue};
+        }
+    }
+}
+
+@mixin generateSchemeTokens($schemes) {
+    $scheme-keys: map.keys($schemes);
+
+    @each $key in $scheme-keys {
+        $scheme: map.get($schemes, $key);
+
+        :root[data-theme="#{$key}"] {
+            @each $scheme-key, $scheme-value in $scheme {
+                --theme-scheme-#{$scheme-key}: #{$scheme-value};
+            }
+        }
+    }
+}
+
+@mixin generatePaletteTokens($palettes) {
+    $palette-keys: map.keys($palettes);
+
+    @each $key in $palette-keys {
+        $palette: map.get($palettes, $key);
+
+        :root {
+            @each $palette-key, $palette-value in $palette {
+                --theme-palette-#{$key}-#{$palette-key}: #{$palette-value};
+            }
+        }
+    }
+}

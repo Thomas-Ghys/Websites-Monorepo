@@ -26,6 +26,7 @@ function createBrandingSassFile(brandName: string): void {
         '@use "libs/theme/tokens/elevation-tokens.scss";\n' +
         '@use "libs/theme/tokens/shape-tokens.scss";\n' +
         '@use "libs/theme/tokens/typography-tokens.scss";\n' +
+        '@use "libs/theme/theme-builder.scss";' +
         '\n\n' +
         '$brand: (\n'
     );
@@ -41,7 +42,7 @@ function createBrandingSassFile(brandName: string): void {
     fileSaver.appendFileSync(brandSassFilePath,
         ');' +
         '\n\n' +
-        '@use "libs/theme/theme-builder.scss";'
+        '@include theme-builder.theme-builder($brand);'
     );
 }
 
@@ -54,7 +55,7 @@ function loadJson(file: string): JsonObject {
 function addCoreColours(file: string, coreColors: JsonValue): void {
     // Start the core colours subsection at the correct tab
     fileSaver.appendFileSync(file,
-        '\tcoreColors: (\n'
+        '\tcoreColours: (\n'
     );
 
     // Loop through each color in the core colours section

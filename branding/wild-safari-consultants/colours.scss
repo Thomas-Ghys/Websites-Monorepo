@@ -1,10 +1,10 @@
 @use "libs/theme/tokens/elevation-tokens.scss";
 @use "libs/theme/tokens/shape-tokens.scss";
 @use "libs/theme/tokens/typography-tokens.scss";
-
+@use "libs/theme/theme-builder.scss";
 
 $brand: (
-	coreColors: (
+	coreColours: (
 		primary: #BFAA69,
 		neutral: #92896C,
 		neutral-variant: #B9A67E,
@@ -421,4 +421,4 @@ $brand: (
 	),
 );
 
-@use "libs/theme/theme-builder.scss";
+@include theme-builder.theme-builder($brand);
